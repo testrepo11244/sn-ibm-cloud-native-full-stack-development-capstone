@@ -2,53 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact Us – Cloud‑Native Car Dealership</title>
+    <title>Contact Us - Car Dealership</title>
     <link rel="stylesheet" href="/static/css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <ul class="nav-list">
-            <li><a href="/static/index.html">Home</a></li>
-            <li><a href="/static/About.html">About Us</a></li>
-            <li><a href="/static/Contact.html" class="active">Contact</a></li>
-            <li><a href="/login">Login</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav class="navbar">
+            <a href="/index.html" class="nav-logo">CarDealership</a>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/static/About.html">About Us</a></li>
+                <li><a href="/static/Contact.html" class="active">Contact Us</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section class="contact-section">
-        <h1>Contact Us</h1>
-        <p>We’d love to hear from you! Reach out through any of the channels below.</p>
+    <main class="contact-page">
+        <section class="contact-intro">
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you! Reach out with any questions, feedback, or partnership inquiries.</p>
+        </section>
 
-        <div class="contact-details">
+        <section class="contact-details">
             <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
                 <h3>Head Office</h3>
-                <p>1234 Innovation Drive<br>
-                Seattle, WA 98101, USA</p>
+                <p>1234 Auto Lane, Detroit, MI 48201, USA</p>
             </div>
 
             <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
                 <h3>Phone</h3>
-                <p>+1 (555) 123‑4567</p>
+                <p>+1 (800) 555‑0199</p>
             </div>
 
             <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
                 <h3>Email</h3>
-                <p><a href="mailto:support@cardealership.com">support@cardealership.com</a></p>
+                <p>support@cardealership.com</p>
             </div>
 
             <div class="contact-item">
-                <h3>Follow Us</h3>
-                <p>
-                    <a href="https://twitter.com/CarDealership" target="_blank">Twitter</a> |
-                    <a href="https://linkedin.com/company/cardela" target="_blank">LinkedIn</a> |
-                    <a href="https://github.com/your‑username/ibm-cloud-native-car-dealership" target="_blank">GitHub</a>
-                </p>
+                <i class="fa-solid fa-clock"></i>
+                <h3>Business Hours</h3>
+                <p>Mon‑Fri: 9:00 AM – 6:00 PM (EST)</p>
             </div>
-        </div>
+        </section>
 
-        <div class="contact-form">
+        <section class="contact-form">
             <h2>Send a Message</h2>
             <form action="/contact/submit/" method="post">
                 <label for="name">Name</label>
@@ -63,13 +66,13 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
 
-                <button type="submit">Submit</button>
+                <button type="submit" class="btn-primary">Submit</button>
             </form>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer class="footer">
-        <p>&copy; 2026 Cloud‑Native Car Dealership. All rights reserved.</p>
+    <footer>
+        <p>&copy; 2024 Car Dealership. All rights reserved.</p>
     </footer>
 </body>
 </html>
