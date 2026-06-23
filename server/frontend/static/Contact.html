@@ -8,96 +8,69 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">CarDealership</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav" aria-controls="navbarNav"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="/contact">Contact Us</a></li>
-                </ul>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">CarDealership</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/static/About.html">About Us</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/static/Contact.html">Contact Us <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/static/Home.html">Home</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
     <!-- Contact Section -->
-    <section class="container my-5">
-        <h1 class="text-center mb-4">Contact Us</h1>
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <form id="contactForm">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Your Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="John Doe" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Your Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="john.doe@example.com" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="subject" class="form-label">Subject</label>
-                        <input type="text" class="form-control" id="subject" placeholder="Inquiry about dealer X" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" rows="5"
-                                  placeholder="Write your message here..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
-                </form>
+    <div class="container mt-5">
+        <h2 class="mb-4 text-center">Get in Touch</h2>
+        <div class="row">
+            <!-- Image Column -->
+            <div class="col-md-6 text-center">
+                <img src="/static/images/contactus.png" alt="Contact Us" class="img-fluid mb-3" style="max-height:300px;">
+                <p>We’re here to help you find the perfect vehicle.</p>
             </div>
-        </div>
 
-        <hr class="my-5">
-
-        <div class="row text-center">
-            <div class="col-md-4">
-                <img src="/static/images/contact/office.jpg" class="img-fluid rounded mb-2"
-                     alt="Office" style="max-height:200px;">
-                <h5>Head Office</h5>
-                <p>1234 Auto Lane<br>Springfield, IL 62704</p>
-                <p><strong>Phone:</strong> +1 (555) 123‑4567</p>
-                <p><strong>Email:</strong> info@cardealership.com</p>
-            </div>
-            <div class="col-md-4">
-                <img src="/static/images/contact/support.jpg" class="img-fluid rounded mb-2"
-                     alt="Support" style="max-height:200px;">
-                <h5>Customer Support</h5>
-                <p>Mon‑Fri: 9:00 am – 6:00 pm (EST)</p>
-                <p><strong>Phone:</strong> +1 (555) 987‑6543</p>
-                <p><strong>Email:</strong> support@cardealership.com</p>
-            </div>
-            <div class="col-md-4">
-                <img src="/static/images/contact/social.jpg" class="img-fluid rounded mb-2"
-                     alt="Social Media" style="max-height:200px;">
-                <h5>Follow Us</h5>
+            <!-- Details Column -->
+            <div class="col-md-6">
+                <h5>Our Showroom</h5>
                 <p>
-                    <a href="https://twitter.com/CarDealership" target="_blank" class="me-2">Twitter</a>
-                    <a href="https://facebook.com/CarDealership" target="_blank" class="me-2">Facebook</a>
-                    <a href="https://instagram.com/CarDealership" target="_blank">Instagram</a>
+                    <img src="/static/images/cars.jpeg" alt="Cars" class="img-thumbnail mr-2" style="width:80px;">
+                    1234 Motorway Avenue<br>
+                    Auto City, CA 90210
                 </p>
+
+                <h5>Phone</h5>
+                <p><i class="fas fa-phone"></i> +1 (555) 123‑4567</p>
+
+                <h5>Email</h5>
+                <p><i class="fas fa-envelope"></i> support@cardealership.com</p>
+
+                <h5>Business Hours</h5>
+                <ul class="list-unstyled">
+                    <li>Monday – Friday: 9:00 AM – 6:00 PM</li>
+                    <li>Saturday: 10:00 AM – 4:00 PM</li>
+                    <li>Sunday: Closed</li>
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
 
-    <footer class="bg-light text-center py-3">
-        © 2024 Car Dealership. All rights reserved.
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        © 2024 CarDealership. All rights reserved.
     </footer>
 
+    <!-- Optional JavaScript -->
+    <script src="/static/js/jquery.min.js"></script>
     <script src="/static/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Simple client‑side form handler (placeholder)
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Your message has been sent! We will get back to you shortly.');
-            this.reset();
-        });
-    </script>
 </body>
 </html>
