@@ -1,20 +1,24 @@
-# Car Dealership Full‑Stack Application
+# Car Dealership Review App
 
-**Repository:** `car-dealership-fullstack`  
-**Project Name:** Cloud‑Native Car Dealership Application  
+**Repository:** `car-dealership-fullstack`
 
-This project is the capstone for the IBM Skills Network **Full‑Stack Development** course. It combines a Django back‑end with a React front‑end to provide a complete car‑dealership experience, including:
+**Project Name:** Car Dealership Review Application
 
-- Dealer listings and filtering by state  
-- Dealer detail pages with customer reviews  
-- User authentication (login / logout / registration)  
-- Review sentiment analysis using IBM Watson NLU  
-- CI/CD pipeline with GitHub Actions and deployment to IBM Cloud  
+## Overview
+This full‑stack application allows users to browse car dealers, view dealer details, read and submit reviews, and see sentiment analysis of review text. The backend is built with **Django** and **Django REST framework**, while the frontend is a **React** single‑page application served as static files.
 
-The repository contains:
+## Technologies
+- **Backend:** Django 4.x, Django REST framework, PostgreSQL
+- **Frontend:** React 18, React Router, Axios, Bootstrap 5
+- **DevOps:** GitHub Actions (CI/CD), Docker, Heroku deployment
+- **Other:** cURL for API testing, Sentiment analysis using NLTK
 
-- `server/` – Django project (`manage.py`, `settings.py`, API views, models)  
-- `frontend/` – React application (`src/`, `public/`, component library)  
-- Documentation, scripts, and CI/CD configuration files.  
+## Features
+- User authentication (login / logout)
+- Dealer listing, filter by state, dealer detail view
+- Review submission with sentiment analysis
+- Admin interface for managing dealers and reviews
+- Responsive UI with About and Contact pages
 
-Feel free to explore the code, run the application locally, or view the live deployment URL provided in the project documentation.
+---  
+For more details, see the individual module READMEs in the `server/` and `client/` directories.
