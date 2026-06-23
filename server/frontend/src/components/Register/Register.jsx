@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './Register.css';
+import './Register.css'; // Assume custom styling exists
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -27,8 +27,23 @@ const Register = () => {
     setMessage(null);
     setError(null);
     try {
-      const response = await axios.post('/api/register/', formData);
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_URL}/api/register/`,
+        formData,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
       setMessage('Registration successful! You can now log in.');
+      setFormData({
+        username: '',
+        first_name: '',
+        last_name: '',
+        email: '',
+        password: '',
+      });
     } catch (err) {
       setError(
         err.response?.data?.detail ||
@@ -38,15 +53,20 @@ const Register = () => {
   };
 
   return (
-    <div className="register-container">
-      <h2>Create an Account</h2>
-      {message && <p className="success-msg">{message}</p>}
-      {error && <p className="error-msg">{error}</p>}
+    <div className="register-container container mt-5">
+      <h2 className="text-center mb-4">Sign‑Up</h2>
+      {message && <div className="alert alert-success">{message}</div>}
+      {error && <div className="alert alert-danger">{error}</div>}
       <form onSubmit={handleSubmit} className="register-form">
-        <div className="form-group">
-          <label htmlFor="username">Username</label>
+
+        {/* Username */}
+        <div className="mb-3">
+          <label htmlFor="username" className="form-label">
+            Username
+          </label>
           <input
             type="text"
+            className="form-control"
             id="username"
             name="username"
             value={formData.username}
@@ -55,10 +75,14 @@ const Register = () => {
           />
         </div>
 
-        <div className="form-group">
-          <label htmlFor="first_name">First Name</label>
+        {/* First Name */}
+        <div className="mb-3">
+          <label htmlFor="first_name" className="form-label">
+            First Name
+          </label>
           <input
             type="text"
+            className="form-control"
             id="first_name"
             name="first_name"
             value={formData.first_name}
@@ -67,10 +91,14 @@ const Register = () => {
           />
         </div>
 
-        <div className="form-group">
-          <label htmlFor="last_name">Last Name</label>
+        {/* Last Name */}
+        <div className="mb-3">
+          <label htmlFor="last_name" className="form-label">
+            Last Name
+          </label>
           <input
             type="text"
+            className="form-control"
             id="last_name"
             name="last_name"
             value={formData.last_name}
@@ -79,10 +107,14 @@ const Register = () => {
           />
         </div>
 
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
+        {/* Email */}
+        <div className="mb-3">
+          <label htmlFor="email" className="form-label">
+            Email
+          </label>
           <input
             type="email"
+            className="form-control"
             id="email"
             name="email"
             value={formData.email}
@@ -91,10 +123,14 @@ const Register = () => {
           />
         </div>
 
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
+        {/* Password */}
+        <div className="mb-3">
+          <label htmlFor="password" className="form-label">
+            Password
+          </label>
           <input
             type="password"
+            className="form-control"
             id="password"
             name="password"
             value={formData.password}
@@ -103,9 +139,12 @@ const Register = () => {
           />
         </div>
 
-        <button type="submit" className="register-btn">
-          Register
-        </button>
+        {/* Register Button */}
+        <div className="d-grid">
+          <button type="submit" className="btn btn-primary">
+            Register
+          </button>
+        </div>
       </form>
     </div>
   );
