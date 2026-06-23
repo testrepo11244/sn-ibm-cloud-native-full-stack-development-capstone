@@ -2,77 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact Us - Car Dealership Review Platform</title>
+    <title>Contact Us - Car Dealership Review</title>
     <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <a href="/index.html" class="nav-logo">CarDeal</a>
+            <a href="/static/index.html" class="nav-logo">CarDealership</a>
             <ul class="nav-links">
-                <li><a href="/index.html">Home</a></li>
+                <li><a href="/static/index.html">Home</a></li>
                 <li><a href="/static/About.html">About Us</a></li>
                 <li><a href="/static/Contact.html" class="active">Contact Us</a></li>
-                <li><a href="/login.html">Login</a></li>
+                <li><a href="/static/login.html">Login</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="container">
-        <section class="contact-intro">
-            <h1>Get in Touch</h1>
-            <p>We’d love to hear from you! Whether you have a question about the platform, need support, or want to give feedback, feel free to reach out.</p>
-        </section>
+        <section class="contact-section">
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you! Reach out using any of the methods below.</p>
 
-        <section class="contact-details">
-            <div class="contact-item">
-                <i class="fa-solid fa-location-dot"></i>
-                <h3>Office Address</h3>
-                <p>1234 Innovation Drive,<br>Tech City, CA 94016, USA</p>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>support@cardealershipreview.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Phone</h3>
+                    <p>+1 (555) 123‑4567</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Address</h3>
+                    <p>1234 Auto Lane, Suite 100, San Francisco, CA 94107, USA</p>
+                </div>
             </div>
 
-            <div class="contact-item">
-                <i class="fa-solid fa-phone"></i>
-                <h3>Phone</h3>
-                <p>+1 (555) 123‑4567</p>
-            </div>
+            <form action="/api/contact/" method="post" class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name">
 
-            <div class="contact-item">
-                <i class="fa-solid fa-envelope"></i>
-                <h3>Email</h3>
-                <p>support@cardealership.com</p>
-            </div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com">
 
-            <div class="contact-item">
-                <i class="fa-solid fa-clock"></i>
-                <h3>Business Hours</h3>
-                <p>Monday – Friday: 9:00 AM – 6:00 PM (PST)</p>
-            </div>
-        </section>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
 
-        <section class="contact-form">
-            <h2>Send Us a Message</h2>
-            <form action="https://formspree.io/f/your-form-id" method="POST">
-                <label for="name"><i class="fa-solid fa-user"></i> Name</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
-                <input type="email" id="email" name="_replyto" required>
-
-                <label for="subject"><i class="fa-solid fa-tag"></i> Subject</label>
-                <input type="text" id="subject" name="subject" required>
-
-                <label for="message"><i class="fa-solid fa-comment-dots"></i> Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <button type="submit" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                <button type="submit" class="btn-primary">Send Message</button>
             </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Car Dealership Review Platform. All rights reserved.</p>
+        <p>&copy; 2024 Car Dealership Review. All rights reserved.</p>
     </footer>
 </body>
 </html>
