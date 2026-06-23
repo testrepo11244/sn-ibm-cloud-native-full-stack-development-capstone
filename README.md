@@ -1,14 +1,18 @@
-# Car Dealership Full‑Stack Application
+# Car Dealership Review Full‑Stack Application
 
-**Repository:** `car-dealership-fullstack`
+**Repository:** `car-dealership-review`
 
-**Project Name:** Car Dealership Review Platform
+**Project Name:** Car Dealership Review Full‑Stack Application
 
-This repository contains a Django REST API backend and a React frontend that together provide a complete car‑dealership review system. Users can:
+This project is a Django + React web application that allows users to browse car dealers, view dealer details, read and submit reviews, and perform sentiment analysis on review text. The frontend is built with React and served as static files by Django. The backend provides a REST API for dealer data, user authentication, and review handling.
 
-- Browse dealers by state or ID  
-- View dealer details and customer reviews  
-- Register, log in, and post their own reviews  
-- Administrators can manage dealers, reviews, and users via the Django admin panel  
+---
 
-The project includes CI/CD with GitHub Actions, automated testing, and a live deployment URL (see the deployment tasks).
+*Features include:*
+- User registration and login (JWT authentication)
+- Dealer list filtered by state
+- Dealer detail page with reviews
+- Review submission with sentiment analysis
+- Admin dashboard for managing dealers and reviews
+- CI/CD pipeline using GitHub Actions
+- Deployment on Render/Heroku (or similar)
