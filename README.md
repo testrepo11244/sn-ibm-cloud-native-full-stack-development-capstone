@@ -1,24 +1,60 @@
-# Car Dealership Review App
+# Cloud‑Native Car Dealership
 
-**Repository:** `car-dealership-fullstack`
+**Repository:** `ibm-cloud-native-car-dealership`  
+**Project Name:** Cloud‑Native Car Dealership (Django + React)
 
-**Project Name:** Car Dealership Review Application
+This repository contains the source code for a full‑stack car‑dealership web application built with:
 
-## Overview
-This full‑stack application allows users to browse car dealers, view dealer details, read and submit reviews, and see sentiment analysis of review text. The backend is built with **Django** and **Django REST framework**, while the frontend is a **React** single‑page application served as static files.
+* **Backend:** Django REST Framework exposing dealer, car‑make/model and review APIs.  
+* **Frontend:** React (Create‑React‑App) consuming the APIs and providing a modern UI.  
+* **CI/CD:** GitHub Actions workflow that builds, tests and deploys the app to IBM Cloud.  
 
-## Technologies
-- **Backend:** Django 4.x, Django REST framework, PostgreSQL
-- **Frontend:** React 18, React Router, Axios, Bootstrap 5
-- **DevOps:** GitHub Actions (CI/CD), Docker, Heroku deployment
-- **Other:** cURL for API testing, Sentiment analysis using NLTK
-
-## Features
-- User authentication (login / logout)
-- Dealer listing, filter by state, dealer detail view
-- Review submission with sentiment analysis
-- Admin interface for managing dealers and reviews
-- Responsive UI with About and Contact pages
+The project demonstrates authentication (login/logout), dealer browsing, review submission with sentiment analysis, and a responsive static site for the About and Contact pages.
 
 ---  
-For more details, see the individual module READMEs in the `server/` and `client/` directories.
+
+## Project Structure (high‑level)
+
+```
+/server
+│   manage.py
+│   requirements.txt
+│   Dockerfile
+│
+├───backend
+│   ├───api
+│   │   ├───views.py
+│   │   ├───serializers.py
+│   │   └───urls.py
+│   └───templates
+│       └───index.html
+│
+└───frontend
+    ├───static
+    │   ├───About.html
+    │   ├───Contact.html
+    │   └───css
+    │       └───style.css
+    └───src
+        └───components
+            └───Register
+                └───Register.jsx
+```
+
+---  
+
+## Getting Started
+
+1. Clone the repo  
+   ```bash
+   git clone https://github.com/your‑username/ibm-cloud-native-car-dealership.git
+   cd ibm-cloud-native-car-dealership
+   ```
+
+2. Follow the **README** inside the `server` folder for detailed setup instructions.
+
+---  
+
+## License
+
+MIT License – see the `LICENSE` file for details.
