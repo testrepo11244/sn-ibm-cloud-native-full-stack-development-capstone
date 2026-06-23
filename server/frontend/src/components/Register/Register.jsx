@@ -1,61 +1,60 @@
-import React, { useState } from 'react';
-import './Register.css';
+import React, { useState } from "react";
+import "./Register.css";
 
 const Register = () => {
   const [formData, setFormData] = useState({
-    username: '',
-    first_name: '',
-    last_name: '',
-    email: '',
-    password: '',
+    username: "",
+    first_name: "",
+    last_name: "",
+    email: "",
+    password: ""
   });
+
+  const [message, setMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: value,
+      [name]: value
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Simple client‑side validation
-    for (const key in formData) {
-      if (!formData[key]) {
-        alert(`Please fill out the ${key.replace('_', ' ')}`);
-        return;
-      }
-    }
+    setMessage("");
 
     try {
-      const response = await fetch('/api/register/', {
-        method: 'POST',
+      const response = await fetch("/api/v1/register/", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json"
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formData)
       });
 
       if (response.ok) {
-        const data = await response.json();
-        alert('Registration successful! You can now log in.');
-        // Optionally redirect to login page
-        window.location.href = '/login';
+        setMessage("Registration successful! You can now log in.");
+        setFormData({
+          username: "",
+          first_name: "",
+          last_name: "",
+          email: "",
+          password: ""
+        });
       } else {
-        const error = await response.json();
-        alert(`Registration failed: ${error.detail || 'Unknown error'}`);
+        const data = await response.json();
+        setMessage(data.detail || "Registration failed.");
       }
-    } catch (err) {
-      console.error('Error during registration:', err);
-      alert('An unexpected error occurred.');
+    } catch (error) {
+      setMessage("An error occurred. Please try again later.");
     }
   };
 
   return (
     <div className="register-container">
       <h2>Sign‑Up</h2>
+      {message && <p className="feedback">{message}</p>}
       <form onSubmit={handleSubmit} className="register-form">
         <label htmlFor="username">Username</label>
         <input
