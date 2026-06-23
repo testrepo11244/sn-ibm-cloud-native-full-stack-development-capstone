@@ -2,63 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact Us - Car Dealership Review</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Contact Us - Cloud‑Enabled Car Dealership</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <a href="/static/index.html" class="nav-logo">CarDealership</a>
-            <ul class="nav-links">
-                <li><a href="/static/index.html">Home</a></li>
-                <li><a href="/static/About.html">About Us</a></li>
-                <li><a href="/static/Contact.html" class="active">Contact Us</a></li>
-                <li><a href="/static/login.html">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="Contact.html" class="active">Contact Us</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
 
-    <main class="container">
-        <section class="contact-section">
-            <h1>Contact Us</h1>
-            <p>We’d love to hear from you! Reach out using any of the methods below.</p>
-
-            <div class="contact-details">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p>support@cardealershipreview.com</p>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <h3>Phone</h3>
-                    <p>+1 (555) 123‑4567</p>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Address</h3>
-                    <p>1234 Auto Lane, Suite 100, San Francisco, CA 94107, USA</p>
-                </div>
+    <section class="contact-section">
+        <h1>Contact Us</h1>
+        <div class="contact-info">
+            <div class="address">
+                <h2>Head Office</h2>
+                <p>1234 Auto Lane<br>
+                Springfield, IL 62704<br>
+                United States</p>
             </div>
+            <div class="phone">
+                <h2>Phone</h2>
+                <p>+1 (555) 123‑4567</p>
+            </div>
+            <div class="email">
+                <h2>Email</h2>
+                <p>support@cardealership.io</p>
+            </div>
+        </div>
 
-            <form action="/api/contact/" method="post" class="contact-form">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required placeholder="Your Name">
+        <div class="contact-form">
+            <h2>Send a Message</h2>
+            <form action="/api/contact/" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required placeholder="you@example.com">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
 
-                <button type="submit" class="btn-primary">Send Message</button>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
             </form>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Car Dealership Review. All rights reserved.</p>
+        <p>&copy; 2026 Cloud‑Enabled Car Dealership. All rights reserved.</p>
     </footer>
 </body>
 </html>
