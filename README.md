@@ -1,60 +1,14 @@
-# Cloud‑Native Car Dealership
+# Repository: car-dealership-fullstack
 
-**Repository:** `ibm-cloud-native-car-dealership`  
-**Project Name:** Cloud‑Native Car Dealership (Django + React)
+## Project Name
+**Car Dealership Full-Stack Application**
 
-This repository contains the source code for a full‑stack car‑dealership web application built with:
+This project is a Django backend serving a REST API for car dealers and reviews, paired with a React frontend that provides a modern user interface for browsing dealers, viewing reviews, and submitting new reviews. It includes user authentication, admin management, CI/CD with GitHub Actions, and deployment to a cloud platform.
 
-* **Backend:** Django REST Framework exposing dealer, car‑make/model and review APIs.  
-* **Frontend:** React (Create‑React‑App) consuming the APIs and providing a modern UI.  
-* **CI/CD:** GitHub Actions workflow that builds, tests and deploys the app to IBM Cloud.  
-
-The project demonstrates authentication (login/logout), dealer browsing, review submission with sentiment analysis, and a responsive static site for the About and Contact pages.
-
----  
-
-## Project Structure (high‑level)
-
-```
-/server
-│   manage.py
-│   requirements.txt
-│   Dockerfile
-│
-├───backend
-│   ├───api
-│   │   ├───views.py
-│   │   ├───serializers.py
-│   │   └───urls.py
-│   └───templates
-│       └───index.html
-│
-└───frontend
-    ├───static
-    │   ├───About.html
-    │   ├───Contact.html
-    │   └───css
-    │       └───style.css
-    └───src
-        └───components
-            └───Register
-                └───Register.jsx
-```
-
----  
-
-## Getting Started
-
-1. Clone the repo  
-   ```bash
-   git clone https://github.com/your‑username/ibm-cloud-native-car-dealership.git
-   cd ibm-cloud-native-car-dealership
-   ```
-
-2. Follow the **README** inside the `server` folder for detailed setup instructions.
-
----  
-
-## License
-
-MIT License – see the `LICENSE` file for details.
+Key Features
+- Dealer listing with state filtering
+- Detailed dealer view with customer reviews
+- User registration and login
+- Review submission with sentiment analysis
+- Admin dashboard for managing dealers and reviews
+- Automated testing and deployment pipeline
