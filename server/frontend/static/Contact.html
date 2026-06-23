@@ -2,58 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact Us - Cloud‑Native Car Dealership</title>
+    <title>Contact Us - Car Dealership Review App</title>
     <link rel="stylesheet" href="/static/css/style.css">
-    <style>
-        body {font-family:Arial,Helvetica,sans-serif; margin:0; background:#f4f4f4;}
-        .navbar {background:#333; overflow:hidden;}
-        .navbar a {float:left; display:block; color:#f2f2f2; text-align:center; padding:14px 16px; text-decoration:none;}
-        .navbar a.active {background:#04AA6D; color:white;}
-        .navbar a:hover {background:#ddd; color:black;}
-        .container {max-width:800px; margin:auto; padding:30px; background:#fff; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
-        .contact-info {margin-top:20px;}
-        .contact-info h3 {margin-bottom:5px;}
-        .contact-info p {margin:0 0 10px;}
-        .map {margin-top:20px;}
-    </style>
+    <link rel="icon" href="/static/images/favicon.ico">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="/static/Home.html">Home</a>
-        <a href="/static/About.html">About</a>
-        <a href="/static/Contact.html" class="active">Contact</a>
-    </nav>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/static/About.html">About Us</a></li>
+                <li><a href="/static/Contact.html" class="active">Contact Us</a></li>
+                <li><a href="/login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="container">
-        <h1>Contact Us</h1>
-        <p>We’d love to hear from you! Reach out using any of the methods below.</p>
-
-        <section class="contact-info">
-            <h3>Head Office</h3>
-            <p>1234 Cloud Avenue<br>
-               Seattle, WA 98101<br>
-               United States</p>
-
-            <h3>Phone</h3>
-            <p>+1 (555) 123‑4567</p>
-
-            <h3>Email</h3>
-            <p>support@cloudcardealership.com</p>
-
-            <h3>Business Hours</h3>
-            <p>Monday – Friday: 9:00 AM – 6:00 PM (PST)</p>
+    <main class="container">
+        <section class="contact-hero">
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you! Reach out with any questions, feedback, or partnership inquiries.</p>
         </section>
 
-        <section class="map">
-            <h3>Find Us</h3>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.504123456789!2d-122.332070684368!3d47.606209979184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490155c0c0c0c0b%3A0x123456789abcdef!2sSeattle%2C%20WA%2C%20USA!5e0!3m2!1sen!2s!4v1600000000000"
-                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </section>
-    </div>
+        <section class="contact-details">
+            <div class="info-block">
+                <h2>Head Office</h2>
+                <p>1234 Auto Lane<br>
+                Detroit, MI 48201<br>
+                United States</p>
+                <p><strong>Phone:</strong> +1 (313) 555‑0198</p>
+                <p><strong>Email:</strong> support@cardealershipapp.com</p>
+            </div>
 
-    <footer style="text-align:center; padding:15px; background:#333; color:#fff;">
-        © 2024 Cloud‑Native Car Dealership
+            <div class="info-block">
+                <h2>Support Hours</h2>
+                <p>Monday – Friday: 9:00 AM – 6:00 PM (EST)</p>
+                <p>Saturday: 10:00 AM – 4:00 PM (EST)</p>
+                <p>Sunday: Closed</p>
+            </div>
+
+            <div class="info-block">
+                <h2>Follow Us</h2>
+                <p>
+                    <a href="https://twitter.com/CarDealershipApp" target="_blank">Twitter</a> |
+                    <a href="https://facebook.com/CarDealershipApp" target="_blank">Facebook</a> |
+                    <a href="https://linkedin.com/company/CarDealershipApp" target="_blank">LinkedIn</a>
+                </p>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h2>Send a Message</h2>
+            <form action="https://formspree.io/f/your-form-id" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="_replyto" required>
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Car Dealership Review App. All rights reserved.</p>
     </footer>
 </body>
 </html>
