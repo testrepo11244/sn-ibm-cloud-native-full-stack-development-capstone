@@ -2,57 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About Us – Cloud‑Native Car Dealership</title>
+    <title>About Us - Car Dealership</title>
     <link rel="stylesheet" href="/static/css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <ul class="nav-list">
-            <li><a href="/static/index.html">Home</a></li>
-            <li><a href="/static/About.html" class="active">About Us</a></li>
-            <li><a href="/static/Contact.html">Contact</a></li>
-            <li><a href="/login">Login</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav class="navbar">
+            <a href="/index.html" class="nav-logo">CarDealership</a>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/static/About.html" class="active">About Us</a></li>
+                <li><a href="/static/Contact.html">Contact Us</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section class="about-section">
-        <h1>About Our Team</h1>
-        <p>We are a passionate group of engineers building a cloud‑native car‑dealership platform that showcases modern full‑stack development practices.</p>
+    <main class="about-page">
+        <section class="team-intro">
+            <h1>Meet the Team</h1>
+            <p>We are a passionate group of developers and car enthusiasts dedicated to providing the best online car dealership experience.</p>
+        </section>
 
-        <div class="team-grid">
-            <!-- Team Member 1 -->
-            <div class="team-member">
-                <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?crop=faces&fit=crop&w=200&h=200" alt="Alice Smith">
-                <h3>Alice Smith</h3>
+        <section class="team-members">
+            <div class="member-card">
+                <img src="/static/images/jane_doe.jpg" alt="Jane Doe" class="member-photo">
+                <h2>Jane Doe</h2>
+                <p class="role">Full‑Stack Engineer</p>
+                <p>Jane leads the development of both the Django API and the React UI, ensuring seamless integration.</p>
+                <a href="mailto:jane.doe@example.com"><i class="fa-solid fa-envelope"></i> jane.doe@example.com</a>
+            </div>
+
+            <div class="member-card">
+                <img src="/static/images/john_smith.jpg" alt="John Smith" class="member-photo">
+                <h2>John Smith</h2>
+                <p class="role">Backend Developer</p>
+                <p>John designs the data models, implements the REST endpoints, and integrates sentiment analysis.</p>
+                <a href="mailto:john.smith@example.com"><i class="fa-solid fa-envelope"></i> john.smith@example.com</a>
+            </div>
+
+            <div class="member-card">
+                <img src="/static/images/alex_lee.jpg" alt="Alex Lee" class="member-photo">
+                <h2>Alex Lee</h2>
                 <p class="role">Frontend Engineer</p>
-                <p>Specializes in React, UI design, and responsive layouts.</p>
-                <a href="mailto:alice.smith@example.com">alice.smith@example.com</a>
+                <p>Alex crafts the React components, UI/UX flows, and ensures responsive design across devices.</p>
+                <a href="mailto:alex.lee@example.com"><i class="fa-solid fa-envelope"></i> alex.lee@example.com</a>
             </div>
 
-            <!-- Team Member 2 -->
-            <div class="team-member">
-                <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?crop=faces&fit=crop&w=200&h=200" alt="Bob Johnson">
-                <h3>Bob Johnson</h3>
-                <p class="role">Backend Engineer</p>
-                <p>Leads the Django REST API development and database design.</p>
-                <a href="mailto:bob.johnson@example.com">bob.johnson@example.com</a>
+            <div class="member-card">
+                <img src="/static/images/maria_garcia.jpg" alt="Maria Garcia" class="member-photo">
+                <h2>Maria Garcia</h2>
+                <p class="role">DevOps & CI/CD Engineer</p>
+                <p>Maria sets up the GitHub Actions pipeline, Docker containers, and cloud deployment.</p>
+                <a href="mailto:maria.garcia@example.com"><i class="fa-solid fa-envelope"></i> maria.garcia@example.com</a>
             </div>
+        </section>
+    </main>
 
-            <!-- Team Member 3 -->
-            <div class="team-member">
-                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?crop=faces&fit=crop&w=200&h=200" alt="Carol Lee">
-                <h3>Carol Lee</h3>
-                <p class="role">UI/UX Designer</p>
-                <p>Creates intuitive user experiences and visual assets.</p>
-                <a href="mailto:carol.lee@example.com">carol.lee@example.com</a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <p>&copy; 2026 Cloud‑Native Car Dealership. All rights reserved.</p>
+    <footer>
+        <p>&copy; 2024 Car Dealership. All rights reserved.</p>
     </footer>
 </body>
 </html>
