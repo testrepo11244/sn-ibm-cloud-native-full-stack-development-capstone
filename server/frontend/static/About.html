@@ -2,65 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About Us - Car Dealership Review App</title>
+    <title>About Us – Cloud‑Native Car Dealership</title>
     <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="icon" href="/static/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <ul class="nav-list">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/static/About.html" class="active">About Us</a></li>
-                <li><a href="/static/Contact.html">Contact Us</a></li>
-                <li><a href="/login.html">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="/static/index.html">Home</a></li>
+            <li><a href="/static/About.html" class="active">About Us</a></li>
+            <li><a href="/static/Contact.html">Contact</a></li>
+            <li><a href="/login">Login</a></li>
+        </ul>
+    </nav>
 
-    <main class="container">
-        <section class="about-hero">
-            <h1>Meet the Team</h1>
-            <p>We are a passionate group of developers building a seamless car‑dealership experience.</p>
-        </section>
+    <section class="about-section">
+        <h1>About Our Team</h1>
+        <p>We are a passionate group of engineers building a cloud‑native car‑dealership platform that showcases modern full‑stack development practices.</p>
 
-        <section class="team-grid">
-            <article class="team-member">
-                <img src="/static/images/team/alice.jpg" alt="Alice Smith">
-                <h2>Alice Smith</h2>
+        <div class="team-grid">
+            <!-- Team Member 1 -->
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?crop=faces&fit=crop&w=200&h=200" alt="Alice Smith">
+                <h3>Alice Smith</h3>
                 <p class="role">Frontend Engineer</p>
-                <p>Alice crafts responsive React components and ensures a smooth user experience.</p>
-                <p class="email">alice.smith@example.com</p>
-            </article>
+                <p>Specializes in React, UI design, and responsive layouts.</p>
+                <a href="mailto:alice.smith@example.com">alice.smith@example.com</a>
+            </div>
 
-            <article class="team-member">
-                <img src="/static/images/team/bob.jpg" alt="Bob Johnson">
-                <h2>Bob Johnson</h2>
+            <!-- Team Member 2 -->
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?crop=faces&fit=crop&w=200&h=200" alt="Bob Johnson">
+                <h3>Bob Johnson</h3>
                 <p class="role">Backend Engineer</p>
-                <p>Bob designs robust Django APIs and handles database architecture.</p>
-                <p class="email">bob.johnson@example.com</p>
-            </article>
+                <p>Leads the Django REST API development and database design.</p>
+                <a href="mailto:bob.johnson@example.com">bob.johnson@example.com</a>
+            </div>
 
-            <article class="team-member">
-                <img src="/static/images/team/carol.jpg" alt="Carol Lee">
-                <h2>Carol Lee</h2>
+            <!-- Team Member 3 -->
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?crop=faces&fit=crop&w=200&h=200" alt="Carol Lee">
+                <h3>Carol Lee</h3>
                 <p class="role">UI/UX Designer</p>
-                <p>Carol creates intuitive layouts and visual assets for the application.</p>
-                <p class="email">carol.lee@example.com</p>
-            </article>
+                <p>Creates intuitive user experiences and visual assets.</p>
+                <a href="mailto:carol.lee@example.com">carol.lee@example.com</a>
+            </div>
+        </div>
+    </section>
 
-            <article class="team-member">
-                <img src="/static/images/team/david.jpg" alt="David Patel">
-                <h2>David Patel</h2>
-                <p class="role">DevOps Engineer</p>
-                <p>David automates CI/CD pipelines and manages cloud deployments.</p>
-                <p class="email">david.patel@example.com</p>
-            </article>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Car Dealership Review App. All rights reserved.</p>
+    <footer class="footer">
+        <p>&copy; 2026 Cloud‑Native Car Dealership. All rights reserved.</p>
     </footer>
 </body>
 </html>
