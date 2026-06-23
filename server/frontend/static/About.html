@@ -2,56 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About Us - Cloud‑Enabled Car Dealership</title>
-    <link rel="stylesheet" href="style.css">
+    <title>About Us - Cloud‑Native Car Dealership</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9;}
+        .container {max-width: 960px; margin:auto; padding:20px;}
+        .team {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
+        .member {background:#fff; border:1px solid #ddd; border-radius:8px; width:260px; text-align:center; padding:15px; box-shadow:0 2px 4px rgba(0,0,0,0.1);}
+        .member img {width:120px; height:120px; border-radius:50%; object-fit:cover; margin-bottom:10px;}
+        .member h3 {margin:5px 0 2px;}
+        .member p {margin:2px 0; color:#555;}
+        .member a {color:#0066cc; text-decoration:none;}
+        .member a:hover {text-decoration:underline;}
+    </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="About.html" class="active">About Us</a></li>
-            <li><a href="Contact.html">Contact Us</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-    </nav>
+    <header>
+        <h1 style="text-align:center; padding:20px 0;">About Us</h1>
+    </header>
+    <div class="container">
+        <p>We are a team of cloud‑native developers passionate about building modern, scalable applications. Our Cloud‑Native Car Dealership app showcases best practices in Django, React, CI/CD, and IBM Cloud services.</p>
 
-    <section class="about-section">
-        <h1>Meet the Team</h1>
-        <div class="team-grid">
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Alice Johnson">
-                <h2>Alice Johnson</h2>
-                <p class="role">Project Lead / Backend Engineer</p>
-                <p>Alice designs the Django REST API, oversees database schema, and ensures secure authentication.</p>
-                <p class="email">alice.johnson@example.com</p>
+        <section class="team">
+            <div class="member">
+                <img src="https://via.placeholder.com/120?text=Alice" alt="Alice Johnson">
+                <h3>Alice Johnson</h3>
+                <p>Full‑Stack Engineer</p>
+                <p>Lead developer for the Django API and integration with IBM Watson NLU.</p>
+                <a href="mailto:alice.johnson@example.com">alice.johnson@example.com</a>
             </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Bob Martinez">
-                <h2>Bob Martinez</h2>
-                <p class="role">Frontend Engineer</p>
-                <p>Bob builds the React UI, integrates Redux for state management, and creates responsive layouts.</p>
-                <p class="email">bob.martinez@example.com</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Catherine Lee">
-                <h2>Catherine Lee</h2>
-                <p class="role">Data Scientist</p>
-                <p>Catherine implements the sentiment‑analysis model that evaluates dealer reviews.</p>
-                <p class="email">catherine.lee@example.com</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="David Patel">
-                <h2>David Patel</h2>
-                <p class="role">DevOps Engineer</p>
-                <p>David configures CI/CD pipelines, Docker containers, and cloud deployment on Render.</p>
-                <p class="email">david.patel@example.com</p>
-            </div>
-        </div>
-    </section>
 
-    <footer>
-        <p>&copy; 2026 Cloud‑Enabled Car Dealership. All rights reserved.</p>
+            <div class="member">
+                <img src="https://via.placeholder.com/120?text=Bob" alt="Bob Martinez">
+                <h3>Bob Martinez</h3>
+                <p>Frontend Engineer</p>
+                <p>Designed and implemented the React UI, including routing and state management.</p>
+                <a href="mailto:bob.martinez@example.com">bob.martinez@example.com</a>
+            </div>
+
+            <div class="member">
+                <img src="https://via.placeholder.com/120?text=Carol" alt="Carol Singh">
+                <h3>Carol Singh</h3>
+                <p>DevOps Engineer</p>
+                <p>Set up CI/CD pipelines with GitHub Actions and deployed the app on IBM Cloud Kubernetes Service.</p>
+                <a href="mailto:carol.singh@example.com">carol.singh@example.com</a>
+            </div>
+
+            <div class="member">
+                <img src="https://via.placeholder.com/120?text=David" alt="David Lee">
+                <h3>David Lee</h3>
+                <p>Data Scientist</p>
+                <p>Implemented sentiment analysis for dealer reviews using IBM Watson NLU.</p>
+                <a href="mailto:david.lee@example.com">david.lee@example.com</a>
+            </div>
+        </section>
+    </div>
+
+    <footer style="text-align:center; padding:20px; background:#eee;">
+        © 2024 Cloud‑Native Car Dealership. All rights reserved.
     </footer>
 </body>
 </html>
