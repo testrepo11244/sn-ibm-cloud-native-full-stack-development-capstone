@@ -21,10 +21,10 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Basic client‑side validation
+    // Simple client‑side validation
     for (const key in formData) {
       if (!formData[key]) {
-        alert('Please fill out all fields.');
+        alert(`Please fill out the ${key.replace('_', ' ')}`);
         return;
       }
     }
@@ -49,14 +49,14 @@ const Register = () => {
       }
     } catch (err) {
       console.error('Error during registration:', err);
-      alert('An error occurred. Please try again later.');
+      alert('An unexpected error occurred.');
     }
   };
 
   return (
     <div className="register-container">
-      <h2>Create an Account</h2>
-      <form className="register-form" onSubmit={handleSubmit}>
+      <h2>Sign‑Up</h2>
+      <form onSubmit={handleSubmit} className="register-form">
         <label htmlFor="username">Username</label>
         <input
           type="text"
