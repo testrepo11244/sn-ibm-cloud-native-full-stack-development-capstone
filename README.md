@@ -1,43 +1,44 @@
-# Car Dealership Full‑Stack Application
+# xrwvm-fullstack_developer_capstone
 
-**Repository:** `github.com/yourusername/car-dealership-fullstack`
+## Project: fullstack_developer_capstone
 
-**Project Name:** Cloud‑Enabled Car Dealership Application  
+This repository contains the final capstone project for the IBM Skills Network **Full Stack Application Development** course.  
+The application is a **Django** backend paired with a **React** frontend that lets users browse car dealers, view dealer reviews, and submit their own reviews.
 
-This project is a full‑stack web application that combines a Django back‑end with a React front‑end. It allows users to browse car dealers, view dealer details, read and submit reviews, and manage their accounts. The application is containerised, CI/CD‑enabled with GitHub Actions, and deployed to a cloud platform.
+### Features
+- **User Authentication** – Register, login, logout  
+- **Dealer Listings** – View all dealers, filter by state, view dealer details  
+- **Review Management** – Submit reviews, view sentiment analysis results  
+- **Admin Dashboard** – Manage dealers and reviews (root user)  
+- **CI/CD Pipeline** – Automated testing and deployment with GitHub Actions  
+- **Live Deployment** – Application deployed on Render/Heroku  
 
----
+### Technologies Used
+- **Backend:** Django, Django REST Framework, PostgreSQL  
+- **Frontend:** React.js, Bootstrap 5, Axios  
+- **Containerization:** Docker  
+- **CI/CD:** GitHub Actions  
+- **Deployment:** Render (or Heroku)  
 
-## Features
-- **Dealer Listings** – Browse all dealers or filter by state.  
-- **Dealer Detail Page** – View dealer information and customer reviews.  
-- **Review Submission** – Authenticated users can post reviews; sentiment analysis is performed on the review text.  
-- **User Authentication** – Register, login, and logout using JWT tokens.  
-- **Responsive UI** – Built with React, Bootstrap, and custom CSS.  
-- **CI/CD Pipeline** – Automated testing and deployment via GitHub Actions.  
-
----
-
-## Tech Stack
-- **Back‑end:** Django 3.2, Django REST Framework, PostgreSQL  
-- **Front‑end:** React 18, React Router, Axios, Bootstrap 5  
-- **DevOps:** Docker, GitHub Actions, Render (deployment)  
-
----
-
-## Getting Started
+### How to Run Locally
 ```bash
-# Clone the repo
-git clone https://github.com/yourusername/car-dealership-fullstack.git
-cd car-dealership-fullstack
+# Clone the repository
+git clone https://github.com/yourusername/xrwvm-fullstack_developer_capstone.git
+cd xrwvm-fullstack_developer_capstone
 
-# Start the development environment
-docker-compose up --build
+# Backend
+cd server
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+
+# Frontend
+cd ../frontend
+npm install
+npm start
 ```
 
-For detailed setup instructions, see the `docs/SETUP.md` file.
-
----
-
-## License
-This project is licensed under the MIT License – see the `LICENSE` file for details.
+---  
+Feel free to explore the code, raise issues, or contribute!
