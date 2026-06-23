@@ -1,24 +1,20 @@
-# Repository: car-dealership-fullstack
+# Car Dealership Full‑Stack Application
 
-## Project Name: Cloud‑Enabled Car Dealership Application
+**Repository:** `car-dealership-fullstack`  
+**Project Name:** Cloud‑Native Car Dealership Application  
 
-This repository contains the source code for a full‑stack car dealership web application built with **Django** as the backend API and **React** for the frontend UI. The project demonstrates CRUD operations for dealers and reviews, user authentication, sentiment analysis integration, CI/CD pipelines with GitHub Actions, and deployment to a cloud platform.
+This project is the capstone for the IBM Skills Network **Full‑Stack Development** course. It combines a Django back‑end with a React front‑end to provide a complete car‑dealership experience, including:
 
---- 
+- Dealer listings and filtering by state  
+- Dealer detail pages with customer reviews  
+- User authentication (login / logout / registration)  
+- Review sentiment analysis using IBM Watson NLU  
+- CI/CD pipeline with GitHub Actions and deployment to IBM Cloud  
 
-### Features
-- Django REST framework API for dealers, reviews, and car makes/models  
-- React single‑page application with routing, authentication, and responsive design  
-- Admin interface for managing dealers and reviews  
-- Sentiment analysis of review text using a simple NLP model  
-- Automated testing and deployment via GitHub Actions  
+The repository contains:
 
---- 
+- `server/` – Django project (`manage.py`, `settings.py`, API views, models)  
+- `frontend/` – React application (`src/`, `public/`, component library)  
+- Documentation, scripts, and CI/CD configuration files.  
 
-### Getting Started
-1. Clone the repository  
-2. Follow the `README.md` instructions in the `server` and `frontend` directories to set up the development environment.  
-
---- 
-
-*For more details, refer to the individual `README.md` files inside the `server` and `frontend` folders.*
+Feel free to explore the code, run the application locally, or view the live deployment URL provided in the project documentation.
